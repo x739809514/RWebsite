@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上传文章</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 marked.js 用于解析 Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>上传文章</h1>
+    </header>
+
+    <section>
+        <form id="article-form">
+            <label for="article-title">文章标题:</label><br>
+            <input type="text" id="article-title" name="title" required class="input-field"><br><br>
+
+            <label for="article-content">文章内容 (Markdown):</label><br>
+            <textarea id="article-content" name="content" rows="10" class="input-field" required></textarea><br><br>
+
+            <!-- 预览按钮 -->
+            <button type="button" id="preview-btn" class="btn">预览文章</button><br><br>
+
+            <!-- 预览区 -->
+            <div id="article-preview" style="border: 1px solid #ddd; padding: 10px; display: none;">
+                <h3>文章预览</h3>
+                <div id="preview-content"></div>
+            </div><br>
+
+            <!-- 提交按钮 -->
+            <button type="submit" class="btn">上传文章</button>
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById('article-form');
+            const previewBtn = document.getElementById('preview-btn');
+            const previewContent = document.getElementById('preview-content');
+            const previewDiv = document.getElementById('article-preview');
+
+            // 预览 Markdown 内容
+            previewBtn.addEventListener('click', function() {
+                const markdownContent = document.getElementById('article-content').value;
+                const htmlContent = marked(markdownContent);  // 使用 marked.js 解析 Markdown
+                previewContent.innerHTML = htmlContent;
+                previewDiv.style.display = 'block';
+            });
+
+            // 提交文章
+            form.addEventListener('submit', async function(event) {
+                event.preventDefault();
+
+                const formData = new FormData();
+                formData.append('title', document.getElementById('article-title').value);
+                formData.append('content', document.getElementById('article-content').value);
+
+                try {
+                    const response = await fetch('/upload_article', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const result = await response.json();
+                    if (result.success) {
+                        alert('文章上传成功！');
+                        window.location.href = '/';  // 上传成功后跳转回主页
+                    } else {
+                        alert('文章上传失败，请重试。');
+                    }
+                } catch (error) {
+                    console.error('提交文章时发生错误:', error);
+                    alert('上传时发生错误，请稍后重试。');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

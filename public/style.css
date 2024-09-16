@@ -1,0 +1,292 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.back-link {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* 输入框样式 */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.upload-form {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-form label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.upload-form input[type="text"], .upload-form input[type="file"], .upload-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.upload-btn {
+    display: inline-block;
+    background-color: #61dafb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-btn:hover {
+    background-color: #21a1f1;
+}
+
+.upload-form textarea {
+    resize: vertical;
+}
+
+/* 全局样式保持不变 */
+
+.gallery {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 每行展示三个作品 */
+    gap: 20px; /* 作品之间的间距 */
+}
+
+.project {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* 让内容居中 */
+}
+
+.project img,
+.project video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* 限制视频的最大高度，防止其占据太多空间 */
+.project video {
+    max-height: 200px;
+}
+
+.project h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 响应式设计：在屏幕较小时调整为两列 */
+@media (max-width: 900px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr); /* 两列布局 */
+    }
+}
+
+/* 响应式设计：在更小屏幕时展示一列 */
+@media (max-width: 600px) {
+    .projects {
+        grid-template-columns: 1fr; /* 单列布局 */
+    }
+}
+
+/* 作品详情页面样式 */
+.project-details {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-details #project-media {
+    margin-bottom: 20px;
+    text-align: center !important; /* 水平居中视频和图片 */
+}
+
+.project-details img, .project-details video {
+    border-radius: 10px;
+    max-width: 70%;
+    max-height: 300px;
+    object-fit: contain;
+    display: inline-block; /* 确保它作为内联块级元素居中 */
+}
+
+/* 限制视频的宽度和高度，使其较小 */
+.project-details video {
+    max-width: 70%;  /* 限制视频最大宽度为 70% */
+    max-height: 300px; /* 限制视频的最大高度 */
+    object-fit: contain; /* 保持视频比例 */
+}
+
+.project-details img {
+    max-width: 70%;  /* 限制图片最大宽度为 70% */
+    max-height: 300px; /* 限制图片的最大高度 */
+    object-fit: contain; /* 保持图片比例 */
+}
+
+.project-details #project-description {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #61dafb;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* 按钮样式 */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* 登录页面样式 */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 作品展示页面 */
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.social-links {
+    margin: 10px 0;
+}
+
+
+/* 统一项目卡片样式 */
+/* 项目卡片样式 */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 每行三项 */
+    gap: 20px; /* 项目之间的间距 */
+}
+
+.project {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 100%; /* 防止项目溢出 */
+    height: auto; /* 高度自适应 */
+}
+
+/* 限制视频和图片的大小，确保布局一致 */
+.project img, .project video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: block; /* 确保它是块级元素 */
+}
+
+/* 文字样式，确保文字自动换行 */
+.project p {
+    font-size: 14px;
+    color: #666;
+    overflow-wrap: break-word; /* 当单词太长时允许断行 */
+    word-wrap: break-word; /* 旧的兼容属性，允许长单词断行 */
+    white-space: normal; /* 允许文本换行 */
+    height: auto; /* 根据内容自适应高度 */
+    max-height: 3.6em; /* 可选：限制最大高度，避免占用过多空间 */
+    line-height: 1.2em; /* 控制行高 */
+}
+
+/* 描述文字的标题样式 */
+.project h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+
+/* 上传文章按钮样式 */
+.upload-article-section {
+    text-align: center;
+    margin: 20px 0;
+}

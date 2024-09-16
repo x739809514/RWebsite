@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品详情</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <h1 id="project-title">作品标题</h1>
+        </div>
+    </header>
+    
+    <section class="project-details">
+        <div id="project-media"></div> <!-- 这里将放置视频或图片 -->
+        <div id="project-description"></div>
+        <a href="index.html" class="back-link btn">返回作品集</a>
+    </section>
+    
+    <!-- 隐藏的编辑表单 -->
+    <section class="edit-form" id="edit-form" style="display:none;">
+        <h2>修改作品</h2>
+        <form id="updateForm" enctype="multipart/form-data">
+            <label for="title">作品名称:</label>
+            <input type="text" id="edit-title" name="title" required class="input-field"><br>
+    
+            <label for="file">修改图片或视频:</label>
+            <input type="file" id="edit-file" name="file" accept="image/*,video/*"><br>
+    
+            <label for="description">作品描述 (Markdown 支持):</label>
+            <textarea id="edit-description" name="description" rows="5" required class="input-field"></textarea><br>
+    
+            <button type="submit" class="btn">保存修改</button>
+            <button type="button" class="btn" id="cancel-btn">取消</button>
+        </form>
+    </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const isAdmin = localStorage.getItem('isAdmin');
+            if (isAdmin === 'true') {
+                document.getElementById('edit-btn').style.display = 'block';
+            }
+    
+            document.getElementById('edit-btn').addEventListener('click', () => {
+                document.getElementById('edit-form').style.display = 'block';
+            });
+    
+            document.getElementById('cancel-btn').addEventListener('click', () => {
+                document.getElementById('edit-form').style.display = 'none';
+            });
+        });
+    </script>
+    
+    <script src="details.js"></script>
+    
+</body>
+</html>
+
+
+

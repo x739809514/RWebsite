@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人作品集</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <img src="assets/avatar.jpg" alt="头像" class="avatar">
+            <h1>我的名字</h1>
+            <p>这是我的个人简介，我是一名全栈开发者，热爱技术和创新。</p>
+            <div class="social-links">
+                <a href="https://linkdle.com/your-profile" target="_blank">Linkdle</a> |
+                <a href="https://github.com/your-github" target="_blank">GitHub</a>
+            </div>
+            <!-- 登录/登出按钮 -->
+            <button id="auth-btn" class="btn">管理员登录</button>
+            <!-- 上传按钮，只对管理员可见 -->
+            <button id="upload-btn" class="btn" style="display:none;">上传新作品</button>
+        </div>
+    </header>
+
+    <section class="gallery">
+        <h2>作品集</h2>
+        <div id="projects" class="projects">
+            <!-- 作品将通过JS动态加载 -->
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 检查是否为管理员
+            const isAdmin = localStorage.getItem('isAdmin');
+            const authBtn = document.getElementById('auth-btn');
+            const uploadBtn = document.getElementById('upload-btn');
+
+            if (isAdmin === 'true') {
+                authBtn.textContent = '登出管理员'; // 登录后显示登出
+                uploadBtn.style.display = 'block';   // 显示上传按钮
+            }
+
+            // 点击管理员登录/登出按钮
+            authBtn.addEventListener('click', function () {
+                if (isAdmin === 'true') {
+                    localStorage.removeItem('isAdmin'); // 清除管理员标识
+                    window.location.reload(); // 刷新页面
+                } else {
+                    window.location.href = 'login.html'; // 跳转到登录页面
+                }
+            });
+
+            // 上传按钮点击跳转到上传页面
+            uploadBtn.addEventListener('click', function () {
+                window.location.href = 'upload.html';
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
