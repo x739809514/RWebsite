@@ -8,6 +8,7 @@ const PORT = 3000;
 
 // 设置静态文件目录
 app.use(express.static('public'));
+const articlesDir = path.join(__dirname, '../articles');
 
 // 设置文件上传目录和文件名
 const storage = multer.diskStorage({
@@ -123,6 +124,45 @@ app.put('/projects/:id', verifyAdmin, upload.single('file'), (req, res) => {
     } catch (err) {
         console.error('项目更新错误:', err);
         return res.status(500).json({ success: false, message: '更新项目失败' });
+    }
+});
+
+// Helper function to recursively find all .md files
+function getMarkdownFiles(dir, fileList = []) {
+    const files = fs.readdirSync(dir);
+
+    files.forEach(file => {
+        const fullPath = path.join(dir, file);
+        const stat = fs.statSync(fullPath);
+
+        if (stat.isDirectory()) {
+            // If it's a directory, recursively get files from it
+            getMarkdownFiles(fullPath, fileList);
+        } else if (path.extname(fullPath) === '.md') {
+            // If it's a markdown file, add it to the list
+            fileList.push(fullPath);
+        }
+    });
+
+    return fileList;
+}
+
+app.use('/articles', express.static(path.join(__dirname, '../articles')));
+
+// Route to get list of markdown files (including in subdirectories)
+app.get('/articles', (req, res) => {
+    console.log('Reading articles from directory:', articlesDir);
+
+    try {
+        const mdFiles = getMarkdownFiles(articlesDir);
+        // Convert full paths to relative paths so they can be used as URLs
+        const relativeMdFiles = mdFiles.map(file => path.relative(articlesDir, file));
+
+        console.log('Markdown files found:', relativeMdFiles);
+        res.json(relativeMdFiles); // Send relative paths to the frontend
+    } catch (err) {
+        console.error('Error reading directory:', err);
+        res.status(500).json({ error: 'Unable to scan directory' });
     }
 });
 

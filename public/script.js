@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     loadProjects();
-    //loadArticles(); // 加载文章
+    loadArticles(); // 加载文章
 
     async function loadProjects() {
         const projectsContainer = document.getElementById('projects');
@@ -45,6 +45,39 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         } catch (error) {
             console.error('加载项目错误:', error);
+        }
+    }
+
+
+     // 解析并显示文章内容的函数
+     async function loadArticles() {
+        const articlesContainer = document.getElementById('articles');
+        articlesContainer.innerHTML = ''; // 清空文章列表
+
+        try {
+            const response = await fetch('/articles');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const articles = await response.json();
+
+            // 显示文章列表并设置链接
+            articles.forEach(article => {
+                const articleItem = document.createElement('li');
+                const articleLink = document.createElement('a');
+
+                // 跳转到 article.html 并传递文件路径作为查询参数
+                articleLink.href = `article.html?article=${encodeURIComponent(article)}`;
+                
+                // 仅显示文件名而非完整路径
+                const fileName = article.split('/').pop();
+                articleLink.innerText = fileName;
+
+                articleItem.appendChild(articleLink);
+                articlesContainer.appendChild(articleItem);
+            });
+        } catch (error) {
+            console.error('Failed to load articles:', error);
         }
     }
 

@@ -1,0 +1,38 @@
+#article-content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#article-content h1, #article-content h2, #article-content h3 {
+    margin-top: 20px;
+}
+
+#article-content p {
+    margin-bottom: 15px;
+}
+
+#article-content pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+#article-content code {
+    background-color: #f4f4f4;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+#article-content a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+#article-content a:hover {
+    text-decoration: underline;
+}
