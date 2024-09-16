@@ -53,26 +53,26 @@ document.addEventListener("DOMContentLoaded", function () {
      async function loadArticles() {
         const articlesContainer = document.getElementById('articles');
         articlesContainer.innerHTML = ''; // 清空文章列表
-
+    
         try {
             const response = await fetch('/articles');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
             const articles = await response.json();
-
+    
             // 显示文章列表并设置链接
             articles.forEach(article => {
                 const articleItem = document.createElement('li');
                 const articleLink = document.createElement('a');
-
-                // 跳转到 article.html 并传递文件路径作为查询参数
-                articleLink.href = `article.html?article=${encodeURIComponent(article)}`;
-                
-                // 仅显示文件名而非完整路径
-                const fileName = article.split('/').pop();
+    
+                // 提取文件名并去掉 .md 扩展名
+                const fileName = article.split('\\').pop().replace('.md', '');
                 articleLink.innerText = fileName;
-
+    
+                // 设置跳转链接，保留原始路径作为查询参数
+                articleLink.href = `article.html?article=${encodeURIComponent(article)}`;
+    
                 articleItem.appendChild(articleLink);
                 articlesContainer.appendChild(articleItem);
             });
@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error('Failed to load articles:', error);
         }
     }
+    
 
     function markdownToHtml(markdown) {
         return markdown

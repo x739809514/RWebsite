@@ -6,6 +6,8 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
+
 // 设置静态文件目录
 app.use(express.static('public'));
 const articlesDir = path.join(__dirname, '../articles');

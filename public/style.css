@@ -221,20 +221,57 @@ p {
     text-align: center;
 }
 
-/* 作品展示页面 */
+/* Profile 区域 */
 .profile {
-    text-align: center;
-    margin-bottom: 20px;
+    margin: 0 auto; /* 居中对齐 */
+    padding: 20px;
+    background-color: #fff;
+    text-align: center; /* 文字居中 */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 增加阴影 */
 }
 
+/* 头像样式 */
 .avatar {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 150px; /* 设置头像宽度 */
+    height: 150px; /* 高度和宽度一致 */
+    border-radius: 50%; /* 圆形头像 */
+    margin-bottom: 20px; /* 头像下方留空 */
+    border: 3px solid #61dafb; /* 添加边框 */
 }
 
-.social-links {
+/* 标题样式 */
+.profile h1 {
+    font-size: 2rem; /* 调整名字的大小 */
     margin: 10px 0;
+    color: #333;
+}
+
+.gallery h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* 文字描述样式 */
+.profile p {
+    font-size: 1rem; /* 调整文本大小 */
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.8; /* 增加行高，提升可读性 */
+}
+
+/* 社交链接 */
+.social-links a {
+    color: #61dafb; /* 链接颜色 */
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
 }
 
 

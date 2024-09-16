@@ -23,7 +23,7 @@ async function loadArticle(path) {
         // 设置文章标题为文件名（去掉 .md 后缀）
         const articleTitle = document.getElementById('article-title');
         const fileName = path.split('/').pop();
-        articleTitle.innerText = fileName.replace('.md', '');
+        articleTitle.innerText = fileName.split('\\').pop().replace('.md', '');
     } catch (error) {
         console.error('Failed to load article:', error);
     }
