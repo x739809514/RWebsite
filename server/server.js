@@ -7,6 +7,11 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.static('public'));
+// 根路径返回 index.html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 // 设置静态文件目录
