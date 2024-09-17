@@ -9,11 +9,6 @@ const PORT = 3000;
 app.use(express.static('public'));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
-
-app.get('/public', (req, res) => {
-    res.redirect('/public');
-});
-
 // 设置静态文件目录
 
 const articlesDir = path.join(__dirname, '../articles');
