@@ -9,7 +9,7 @@ const PORT = 3000;
 app.use(express.static('public'));
 // 根路径返回 index.html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public', 'index.html')); // 根据你的目录调整路径
+    res.sendFile(path.join(__dirname, '../public')); // 根据你的目录调整路径
 });
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
