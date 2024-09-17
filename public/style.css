@@ -192,7 +192,7 @@ p {
     text-decoration: underline;
 }
 
-/* 按钮样式 */
+/* 按钮样式
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -208,7 +208,7 @@ p {
 
 .btn:hover {
     background-color: #45a049;
-}
+} */
 
 /* 登录页面样式 */
 .login-container {
@@ -221,31 +221,104 @@ p {
     text-align: center;
 }
 
-/* Profile 区域 */
+/* Profile 容器布局 */
 .profile {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: space-between;
+    max-width: 900px; /* 限制内容宽度 */
     margin: 0 auto; /* 居中对齐 */
     padding: 20px;
     background-color: #fff;
-    text-align: center; /* 文字居中 */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 增加阴影 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 增加阴影效果 */
 }
 
 /* 头像样式 */
 .avatar {
-    width: 150px; /* 设置头像宽度 */
-    height: 150px; /* 高度和宽度一致 */
-    border-radius: 50%; /* 圆形头像 */
-    margin-bottom: 20px; /* 头像下方留空 */
-    border: 3px solid #61dafb; /* 添加边框 */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px; /* 右边留出空间 */
+    border: 3px solid #61dafb;
+}
+
+/* 右侧文字内容区域 */
+.profile-content {
+    flex: 1; /* 占满剩余空间 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中 */
 }
 
 /* 标题样式 */
-.profile h1 {
-    font-size: 2rem; /* 调整名字的大小 */
-    margin: 10px 0;
+.profile-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
     color: #333;
 }
+
+/* 简介文本样式 */
+.profile-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* 社交链接 */
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: #61dafb;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* 按钮样式 */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* 响应式设计：在小屏幕上排列为上下布局 */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column; /* 切换为垂直布局 */
+        align-items: center;
+        text-align: center;
+    }
+
+    .avatar {
+        margin-bottom: 20px;
+    }
+
+    .profile-content {
+        align-items: center;
+    }
+}
+
+
+
+/* 统一项目卡片样式 */
+/* 项目卡片样式 */
 
 .gallery h2 {
     font-size: 24px;
@@ -254,29 +327,6 @@ p {
     text-align: center;
 }
 
-/* 文字描述样式 */
-.profile p {
-    font-size: 1rem; /* 调整文本大小 */
-    color: #666;
-    margin-bottom: 20px;
-    line-height: 1.8; /* 增加行高，提升可读性 */
-}
-
-/* 社交链接 */
-.social-links a {
-    color: #61dafb; /* 链接颜色 */
-    text-decoration: none;
-    font-weight: 600;
-    margin: 0 10px;
-}
-
-.social-links a:hover {
-    text-decoration: underline;
-}
-
-
-/* 统一项目卡片样式 */
-/* 项目卡片样式 */
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 每行三项 */
