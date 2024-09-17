@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = 80;
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
@@ -170,6 +170,6 @@ app.get('/articles', (req, res) => {
 
 app.use(express.static(path.join(__dirname, 'Images')));
 
-app.listen(PORT,'0.0.0.0', () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is running on 0.0.0.0:${PORT}`);
 });
