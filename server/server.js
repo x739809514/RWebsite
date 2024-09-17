@@ -6,11 +6,9 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-app.use(express.static('public'));
-// 根路径返回 index.html
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public')); // 根据你的目录调整路径
-});
+//app.use(express.static('public'));
+//根路径返回 index.html
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
