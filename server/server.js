@@ -10,8 +10,8 @@ app.use(express.static('public'));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 
-app.get('/', (req, res) => {
-    res.send('Welcome to the homepage');
+app.get('/public', (req, res) => {
+    res.redirect('/public');
 });
 
 // 设置静态文件目录
