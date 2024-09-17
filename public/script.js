@@ -1,8 +1,10 @@
+let currentPage = 1;
+const articlesPerPage = 15;  // Number of articles per page
+
 document.addEventListener("DOMContentLoaded", function () {
     loadProjects();
     loadArticles(); // 加载文章
-    
-    app.use(express.static('public'));
+    app.use(express.static('public'))});
 
     async function loadProjects() {
         const projectsContainer = document.getElementById('projects');
@@ -51,37 +53,63 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-     // 解析并显示文章内容的函数
-     async function loadArticles() {
+    async function loadArticles(page = 1) {
         const articlesContainer = document.getElementById('articles');
-        articlesContainer.innerHTML = ''; // 清空文章列表
+        articlesContainer.innerHTML = ''; // Clear current articles
+        const paginationControls = document.querySelector('.pagination');
+        if (paginationControls) paginationControls.remove();  // Clear existing pagination
     
         try {
-            const response = await fetch('/articles');
+            const response = await fetch('/articles'); // Fetch the articles
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
             const articles = await response.json();
     
-            // 显示文章列表并设置链接
-            articles.forEach(article => {
+            // Calculate pagination
+            const totalArticles = articles.length;
+            const totalPages = Math.ceil(totalArticles / articlesPerPage);
+            const start = (page - 1) * articlesPerPage;
+            const end = start + articlesPerPage;
+            const articlesToDisplay = articles.slice(start, end);
+    
+            // Display the articles for the current page
+            articlesToDisplay.forEach(article => {
                 const articleItem = document.createElement('li');
                 const articleLink = document.createElement('a');
     
-                // 提取文件名并去掉 .md 扩展名
                 const fileName = article.split('\\').pop().replace('.md', '');
                 articleLink.innerText = fileName;
     
-                // 设置跳转链接，保留原始路径作为查询参数
                 articleLink.href = `article.html?article=${encodeURIComponent(article)}`;
-    
                 articleItem.appendChild(articleLink);
                 articlesContainer.appendChild(articleItem);
             });
+    
+            // Add pagination controls
+            const paginationControls = document.createElement('div');
+            paginationControls.classList.add('pagination');
+    
+            if (page > 1) {
+                const prevButton = document.createElement('button');
+                prevButton.innerText = 'Previous';
+                prevButton.onclick = () => loadArticles(page - 1);  // Load the previous page
+                paginationControls.appendChild(prevButton);
+            }
+    
+            if (page < totalPages) {
+                const nextButton = document.createElement('button');
+                nextButton.innerText = 'Next';
+                nextButton.onclick = () => loadArticles(page + 1);  // Load the next page
+                paginationControls.appendChild(nextButton);
+            }
+    
+            articlesContainer.appendChild(paginationControls);
         } catch (error) {
             console.error('Failed to load articles:', error);
         }
     }
+
     
 
     function markdownToHtml(markdown) {
@@ -92,4 +120,3 @@ document.addEventListener("DOMContentLoaded", function () {
             .replace(/\*(.*)\*/gim, '<em>$1</em>') // italic
             .replace(/\n/gim, '<br>'); // line break
     }
-});
