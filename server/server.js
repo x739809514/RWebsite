@@ -168,6 +168,8 @@ app.get('/articles', (req, res) => {
     }
 });
 
+app.use(express.static(path.join(__dirname, 'Images')));
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

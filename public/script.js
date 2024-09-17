@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     loadProjects();
     loadArticles(); // 加载文章
+    
+    app.use(express.static('public'));
 
     async function loadProjects() {
         const projectsContainer = document.getElementById('projects');
