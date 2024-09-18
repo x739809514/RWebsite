@@ -16,5 +16,11 @@
     "description": "一个微信小游戏，点击老板获得金钱和分数，在金钱小于0时游戏结束",
     "file": "1726513046517.mp4",
     "type": "video"
+  },
+  {
+    "title": "RFramework",
+    "description": "Github: https://github.com/x739809514/RFramework.\n This framework is mainly used for beginners who are just learning how to make games. It provides a simple system for event distribution, storage, scene switching, etc. The framework allows beginners to build their own 2D games based on this framework. Beginners can build their own 2D games based on this framework. At the same time, you can also learn the knowledge of related design patterns.",
+    "file": "RFramework.png",
+    "type": "image"
   }
 ]
