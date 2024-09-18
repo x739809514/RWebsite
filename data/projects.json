@@ -2,7 +2,7 @@
   {
     "title": "龙之歌",
     "description": "Beat enemies and collect equipments, different equipments can improve properties and defense abnormal states.",
-    "file": "1726512382046.mp4",
+    "file": "rpg.mp4",
     "type": "video"
   },
   {
@@ -14,7 +14,7 @@
   {
     "title": "下班保卫战",
     "description": "一个微信小游戏，点击老板获得金钱和分数，在金钱小于0时游戏结束",
-    "file": "1726513046517.mp4",
+    "file": "xiaban.mp4",
     "type": "video"
   },
   {
@@ -22,5 +22,17 @@
     "description": "Github: https://github.com/x739809514/RFramework.\n This framework is mainly used for beginners who are just learning how to make games. It provides a simple system for event distribution, storage, scene switching, etc. The framework allows beginners to build their own 2D games based on this framework. Beginners can build their own 2D games based on this framework. At the same time, you can also learn the knowledge of related design patterns.",
     "file": "RFramework.png",
     "type": "image"
+  },
+  {
+    "title": "HotFixProj",
+    "description": "Github: https://github.com/x739809514/UHotFixProject\n This is a hotload project which is based on ILRuntime. I implemented an UI framework in this project. ILRuntime is a hotload solution for mobile games, which can let developers code in c#. ILRuntime's performance is great, it runs 10 times faster than xLua in mobile phones. If you want to know more details about how to use ILRuntime, please check the official document: https://ourpalm.github.io/ILRuntime/public/v1/guide/index.html",
+    "file": "IlR.png",
+    "type": "image"
+  },
+  {
+    "title": "AnimationSystem",
+    "description": "Github: https://github.com/x739809514/AnimationSystem\n The traditional Animation Controllers are complex and easy to be messy. We can use Playable to build a custom Animation system. In this project, I built some nodes for animation graph: 'Mix', 'blendtree','random selector', 'AnimUnit', 'root'. All these nodes are controlled by AnimBehavior.",
+    "file": "Playable.mp4",
+    "type": "video"
   }
 ]

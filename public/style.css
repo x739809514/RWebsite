@@ -141,6 +141,7 @@ p {
 }
 
 /* 作品详情页面样式 */
+
 .project-details {
     max-width: 800px;
     margin: 40px auto;
@@ -444,4 +445,14 @@ p {
 
 .pagination button:hover {
     background-color: #45a049;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+    overflow: hidden; /* Hides overflow text */
+    text-overflow: ellipsis; /* Adds ellipsis (...) to indicate truncated text */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limits the text to 3 lines */
+    -webkit-box-orient: vertical;
 }

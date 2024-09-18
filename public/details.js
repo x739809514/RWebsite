@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     try {
         const response = await fetch('/projects');
         const projects = await response.json();
-
+        
         const project = projects[projectId];
         if (!project) {
             alert('作品不存在');
@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
 
         projectData = project; // 保存项目数据以便后续修改
-
+        
+        console.log(project.title);
         // 设置标题
         document.getElementById('project-title').innerText = project.title;
 
