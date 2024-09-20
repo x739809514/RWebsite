@@ -1,0 +1,155 @@
+{
+  "main": {
+    "id": "0137c3f5567dff4f",
+    "type": "split",
+    "children": [
+      {
+        "id": "b73e2ad55b356a35",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "918a9192c32c4323",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Unity/微信小游戏开发笔记.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2313fcecbb842827",
+    "type": "split",
+    "children": [
+      {
+        "id": "d36d54d6882d26f7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "57d2e478338ed49f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0a24dbb756527de0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1f5796206d28b8ef",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1e1fa0f30e308af7",
+    "type": "split",
+    "children": [
+      {
+        "id": "32900d48ea3fc050",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a7ba1916fc08d696",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Unity/微信小游戏开发笔记.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "128960fd58856bae",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Unity/微信小游戏开发笔记.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2b48a8ce05e3630e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "2d9d1b6fb09fcded",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Unity/微信小游戏开发笔记.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "918a9192c32c4323",
+  "lastOpenFiles": [
+    "Unity/Addressable Note.md",
+    "Unity/微信小游戏开发笔记.md",
+    "AWS 部署 git 笔记.md"
+  ]
+}
