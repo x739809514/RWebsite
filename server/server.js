@@ -30,6 +30,7 @@ const upload = multer({ storage: storage });
 
 // 项目文件路径
 const projectsPath = path.join(__dirname, '../data/projects.json');
+console.log(projectsPath);
 
 // 初始化项目文件
 function initializeProjectsFile() {

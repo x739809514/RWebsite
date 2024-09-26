@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // 检查是否为管理员
     const isAdmin = localStorage.getItem('isAdmin');
+    console.log(isAdmin)
     if (isAdmin === 'true') {
         document.getElementById('edit-btn').style.display = 'block';
     }
