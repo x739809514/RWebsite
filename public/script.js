@@ -1,7 +1,6 @@
 let currentPage = 1;
 const articlesPerPage = 15;  // Number of articles per page
 
-const app = express();
 document.addEventListener("DOMContentLoaded", function () {
     loadProjects();
     loadArticles(); // 加载文章
