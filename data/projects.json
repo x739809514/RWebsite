@@ -12,7 +12,6 @@
     "type": "video"
   },
   {
-<<<<<<< Updated upstream
     "title": "StoryEditor",
     "description": "## StoryEditor\r\nA StoryEditor based on XNode for unity. Support 8 kinds of nodes: AnimNode, AssetNode, AudioNode, BackgroundNode, DialogNode, EndNode, OptionNode and StartNode. \r\n\r\n## Nodes\r\nAnimNode: Play animations, based on unity playable.\r\nAssetNode: store dialogue assets\r\nAudioNode: store audios\r\nBackgroundNode: Add background image for dialogue\r\nDialogNode: Add dialogues\r\nOptionNode: Add options\r\n\r\n## Github:\r\nhttps://github.com/x739809514/Story\r\n",
     "file": "1727357075918.mp4",
@@ -24,7 +23,6 @@
 =======
     "title": "ParticleSystem",
     "description": "## Particle(Fire)",
->>>>>>> Stashed changes
     "file": "1726512753523.mp4",
     "type": "video"
   },
