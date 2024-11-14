@@ -7,11 +7,12 @@
   },
   {
     "title": "DragonSong",
-    "description": "## DragonSong\r\nBeat enemies and collect equipments, different equipments can improve properties and defense abnormal states.",
+    "description": "## [Game]DragonSong\r\nBeat enemies and collect equipments, different equipments can improve properties and defense abnormal states.",
     "file": "rpg.mp4",
     "type": "video"
   },
   {
+<<<<<<< Updated upstream
     "title": "StoryEditor",
     "description": "## StoryEditor\r\nA StoryEditor based on XNode for unity. Support 8 kinds of nodes: AnimNode, AssetNode, AudioNode, BackgroundNode, DialogNode, EndNode, OptionNode and StartNode. \r\n\r\n## Nodes\r\nAnimNode: Play animations, based on unity playable.\r\nAssetNode: store dialogue assets\r\nAudioNode: store audios\r\nBackgroundNode: Add background image for dialogue\r\nDialogNode: Add dialogues\r\nOptionNode: Add options\r\n\r\n## Github:\r\nhttps://github.com/x739809514/Story\r\n",
     "file": "1727357075918.mp4",
@@ -20,48 +21,52 @@
   {
     "title": "火花",
     "description": "一个火花粒子效果",
+=======
+    "title": "ParticleSystem",
+    "description": "## Particle(Fire)",
+>>>>>>> Stashed changes
     "file": "1726512753523.mp4",
     "type": "video"
   },
   {
     "title": "下班保卫战",
-    "description": "一个微信小游戏，点击老板获得金钱和分数，在金钱小于0时游戏结束",
+    "description": "## [Game]MiniGame\r\n一个微信小游戏，点击老板获得金钱和分数，在金钱小于0时游戏结束",
     "file": "xiaban.mp4",
     "type": "video"
   },
   {
     "title": "PathFinding",
-    "description": "Github: https://github.com/x739809514/PathFinding_Algorithms \n\n This project is about Pathfinding algorithms. There are 3 methods here, NavMesh, A star and Funnel Algorithm. The Funnel Algorithm is independent with Unity, and it can be extracted for back-end",
+    "description": "## PathFinding\r\nGithub: https://github.com/x739809514/PathFinding_Algorithms \r\n\r\n This project is about Pathfinding algorithms. There are 3 methods here, NavMesh, A star and Funnel Algorithm. The Funnel Algorithm is independent with Unity, and it can be extracted for back-end",
     "file": "pathfinding.mp4",
     "type": "video"
   },
   {
     "title": "RFramework",
-    "description": "Github: https://github.com/x739809514/RFramework.\n\n This framework is mainly used for beginners who are just learning how to make games. It provides a simple system for event distribution, storage, scene switching, etc. The framework allows beginners to build their own 2D games based on this framework. Beginners can build their own 2D games based on this framework. At the same time, you can also learn the knowledge of related design patterns.",
+    "description": "## 2D GameFrameWork\r\nGithub: https://github.com/x739809514/RFramework.\r\n\r\n This framework is mainly used for beginners who are just learning how to make games. It provides a simple system for event distribution, storage, scene switching, etc. The framework allows beginners to build their own 2D games based on this framework. Beginners can build their own 2D games based on this framework. At the same time, you can also learn the knowledge of related design patterns.",
     "file": "RFramework.png",
     "type": "image"
   },
   {
     "title": "SocketLib",
-    "description": "Github: https://github.com/x739809514/SoketLib \n\n This is a NetWork API library written by c#. It can be used for game back-end.",
+    "description": "## SocketLib \r\nGithub: https://github.com/x739809514/SoketLib \r\n\r\n This is a NetWork API library written by c#. It can be used for game back-end.",
     "file": "SocketLib.png",
     "type": "image"
   },
   {
     "title": "HotFixProj",
-    "description": "Github: https://github.com/x739809514/UHotFixProject\n\n This is a hotload project which is based on ILRuntime. I implemented an UI framework in this project. ILRuntime is a hotload solution for mobile games, which can let developers code in c#. ILRuntime's performance is great, it runs 10 times faster than xLua in mobile phones. If you want to know more details about how to use ILRuntime, please check the official document: https://ourpalm.github.io/ILRuntime/public/v1/guide/index.html",
+    "description": "## HotFix Proj\r\nGithub: https://github.com/x739809514/UHotFixProject\r\n\r\n This is a hotload project which is based on ILRuntime. I implemented an UI framework in this project. ILRuntime is a hotload solution for mobile games, which can let developers code in c#. ILRuntime's performance is great, it runs 10 times faster than xLua in mobile phones. If you want to know more details about how to use ILRuntime, please check the official document: https://ourpalm.github.io/ILRuntime/public/v1/guide/index.html",
     "file": "IlR.png",
     "type": "image"
   },
   {
-    "title": "AnimationSystem",
-    "description": "Github: https://github.com/x739809514/AnimationSystem\n\n The traditional Animation Controllers are complex and easy to be messy. We can use Playable to build a custom Animation system. In this project, I built some nodes for animation graph: 'Mix', 'blendtree','random selector', 'AnimUnit', 'root'. All these nodes are controlled by AnimBehavior.",
+    "title": "MotionSystem",
+    "description": "## Motion System\r\nGithub: https://github.com/x739809514/AnimationSystem\r\n\r\n The traditional Animation Controllers are complex and easy to be messy. We can use Playable to build a custom Animation system. In this project, I built some nodes for animation graph: 'Mix', 'blendtree','random selector', 'AnimUnit', 'root'. All these nodes are controlled by AnimBehavior.",
     "file": "Playable.mp4",
     "type": "video"
   },
   {
     "title": "PuzzelGameFramework",
-    "description": "Github: https://github.com/x739809514/Lostlsland_Proj\n\n This is a simple puzzle game, it has several game systems, such as SceneManager, New Game Plus system, Saving system, EventSystem, BagSystem.",
+    "description": "## 2DPuzzle Framework\r\nGithub: https://github.com/x739809514/Lostlsland_Proj\r\n\r\n This is a simple puzzle game, it has several game systems, such as SceneManager, New Game Plus system, Saving system, EventSystem, BagSystem.",
     "file": "lostisland.mp4",
     "type": "video"
   }
