@@ -1,8 +1,20 @@
 [
   {
+    "title": "BossBattle",
+    "description": "## BossBattle\r\nA boss battle practice in 2D\r\n",
+    "file": "boss2.mp4",
+    "type": "video"
+  },
+  {
     "title": "DragonSong",
     "description": "## DragonSong\r\nBeat enemies and collect equipments, different equipments can improve properties and defense abnormal states.",
     "file": "rpg.mp4",
+    "type": "video"
+  },
+  {
+    "title": "StoryEditor",
+    "description": "## StoryEditor\r\nA StoryEditor based on XNode for unity. Support 8 kinds of nodes: AnimNode, AssetNode, AudioNode, BackgroundNode, DialogNode, EndNode, OptionNode and StartNode. \r\n\r\n## Nodes\r\nAnimNode: Play animations, based on unity playable.\r\nAssetNode: store dialogue assets\r\nAudioNode: store audios\r\nBackgroundNode: Add background image for dialogue\r\nDialogNode: Add dialogues\r\nOptionNode: Add options\r\n\r\n## Github:\r\nhttps://github.com/x739809514/Story\r\n",
+    "file": "1727357075918.mp4",
     "type": "video"
   },
   {
@@ -51,12 +63,6 @@
     "title": "PuzzelGameFramework",
     "description": "Github: https://github.com/x739809514/Lostlsland_Proj\n\n This is a simple puzzle game, it has several game systems, such as SceneManager, New Game Plus system, Saving system, EventSystem, BagSystem.",
     "file": "lostisland.mp4",
-    "type": "video"
-  },
-  {
-    "title": "StoryEditor",
-    "description": "## StoryEditor\r\nA StoryEditor based on XNode for unity. Support 8 kinds of nodes: AnimNode, AssetNode, AudioNode, BackgroundNode, DialogNode, EndNode, OptionNode and StartNode. \r\n\r\n## Nodes\r\nAnimNode: Play animations, based on unity playable.\r\nAssetNode: store dialogue assets\r\nAudioNode: store audios\r\nBackgroundNode: Add background image for dialogue\r\nDialogNode: Add dialogues\r\nOptionNode: Add options\r\n\r\n## Github:\r\nhttps://github.com/x739809514/Story\r\n",
-    "file": "1727357075918.mp4",
     "type": "video"
   }
 ]
