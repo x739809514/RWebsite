@@ -13,10 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Unity/微信小游戏开发笔记.md",
+                "file": "Unity/AI状态机和Animation System方案(Unity).md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "AI状态机和Animation System方案(Unity)"
             }
           }
         ]
@@ -39,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
             }
           },
           {
@@ -54,7 +58,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           },
           {
@@ -62,7 +68,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
             }
           }
         ]
@@ -85,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Unity/微信小游戏开发笔记.md",
+                "file": "Unity/AI状态机和Animation System方案(Unity).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +101,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "AI状态机和Animation System方案(Unity) 的反向链接列表"
             }
           },
           {
@@ -102,10 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Unity/微信小游戏开发笔记.md",
+                "file": "Unity/AI状态机和Animation System方案(Unity).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "AI状态机和Animation System方案(Unity) 的出链列表"
             }
           },
           {
@@ -116,7 +128,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
             }
           },
           {
@@ -125,8 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Unity/微信小游戏开发笔记.md"
-              }
+                "file": "Unity/AI状态机和Animation System方案(Unity).md"
+              },
+              "icon": "lucide-list",
+              "title": "AI状态机和Animation System方案(Unity) 的大纲"
             }
           }
         ]
@@ -138,20 +154,24 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
     }
   },
   "active": "918a9192c32c4323",
   "lastOpenFiles": [
-    "Unity/StoryEditor.md",
-    "Unity/微信小游戏开发笔记.md",
+    "Unity/WeChat Mini-Game Optimization.md",
+    "Unity/AI状态机和Animation System方案(Unity).md",
     "Unity/PathFinding.md",
     "Unity/Addressable Note.md",
+    "Unity/img/addressable2.png",
+    "Unity/img/addressable1.png",
+    "Unity/微信小游戏开发笔记.md",
+    "Unity/StoryEditor.md",
     "AWS 部署 git 笔记.md"
   ]
 }
