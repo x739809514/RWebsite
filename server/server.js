@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = 80;
 
 //app.use(express.static('public'));
 //根路径返回 index.html
