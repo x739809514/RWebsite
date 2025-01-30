@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Unity/AI状态机和Animation System方案(Unity).md",
+                "file": "Unity/UGUI DrawCall 优化汇总.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AI状态机和Animation System方案(Unity)"
+              "title": "UGUI DrawCall 优化汇总"
             }
           }
         ]
@@ -165,9 +165,10 @@
   "active": "918a9192c32c4323",
   "lastOpenFiles": [
     "Unity/WeChat Mini-Game Optimization.md",
-    "Unity/AI状态机和Animation System方案(Unity).md",
     "Unity/PathFinding.md",
+    "Unity/UGUI DrawCall 优化汇总.md",
     "Unity/Addressable Note.md",
+    "Unity/AI状态机和Animation System方案(Unity).md",
     "Unity/img/addressable2.png",
     "Unity/img/addressable1.png",
     "Unity/微信小游戏开发笔记.md",
