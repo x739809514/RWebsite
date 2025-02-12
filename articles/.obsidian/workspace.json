@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "918a9192c32c4323",
+            "id": "1c8ab2c94402aff6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Unity/ILRuntime 笔记汇总.md",
+                "file": "面试题汇总.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ILRuntime 笔记汇总"
+              "title": "面试题汇总"
             }
           }
         ]
@@ -163,18 +163,23 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "918a9192c32c4323",
+  "active": "1c8ab2c94402aff6",
   "lastOpenFiles": [
-    "Unity/UGUI DrawCall 优化汇总.md",
     "Unity/ILRuntime 笔记汇总.md",
-    "Unity/WeChat Mini-Game Optimization.md",
-    "Unity/PathFinding.md",
-    "Unity/Addressable Note.md",
+    "面试题汇总.md",
     "Unity/AI状态机和Animation System方案(Unity).md",
+    "NLP/Model Fine-Tuning.md",
+    "NLP/NLP基础知识.md",
+    "NLP/HuggingFace.md",
+    "NLP/案例代码分析（一）.md",
+    "Unity/WeChat Mini-Game Optimization.md",
+    "Unity/Addressable Note.md",
+    "AWS 部署 git 笔记.md",
+    "Unity/UGUI DrawCall 优化汇总.md",
+    "Unity/PathFinding.md",
     "Unity/img/addressable2.png",
     "Unity/img/addressable1.png",
     "Unity/微信小游戏开发笔记.md",
-    "Unity/StoryEditor.md",
-    "AWS 部署 git 笔记.md"
+    "Unity/StoryEditor.md"
   ]
 }

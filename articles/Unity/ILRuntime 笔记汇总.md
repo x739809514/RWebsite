@@ -14,6 +14,31 @@
 3. 在热更工程中使用Coroutine，需要注册adaptor
 4. 在热更工程中可以继承主工程的类，但是实际上继承的事转换后的接口类ILInstance, 在特殊情况下会出现类型不匹配的错误，示例如下。
 5. 如果热更 和 主工程需要实现相同的方法，使用接口而非继承
+```c#
+namespace MainProject
+{
+    public interface Imessage { }
+
+    public class MessageTest : Imessage
+    {
+        public static Imessage GetMessage(MessageTest str)
+        {
+            //do some work
+
+            return str;
+        }
+    }
+}
+
+namespace HotFix_Project.ILRuntime_UITest
+{
+    class CrossDomainInheritance : MessageTest
+    {
+        List<Imessage> messageList = new List<Imessage>();
+        messageList.add(this); //此行编译出错
+    }
+}
+```
 
 #### CLR绑定 和 反射
 

@@ -12,5 +12,5 @@
 2. 注意hierarchy中的组件排布，例如Image和text一般用的不同的material，这样会打断合批，最好把image和text分开放在一起
 3. 把动态的UI和静态的UI分开，动态UI包括RectTransform的变换，Color中透明度的改变等，这些都会打断合批，不过只改变颜色不会打断合批(使用Property Block修改)
 4. 保持类似UI组件材质和shader统一，使用shared material，ß或使用同一个material，用property block修改属性
-5. 不要直接修改image的alpha，如果需要使用canvas group.alpha
+5. 不要直接修改image的alpha，如果需要使用canvas group.alpha就用canvas group
 6. 最后，用UI profile来检测draw call的数量
