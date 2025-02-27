@@ -59,3 +59,19 @@ CLR绑定会形成一个缓存列表，之后主工程在调用热更中的方�
 1. 用接口而非集成
 2. 划分主工程和热更之间的资源，哪一部分属于主工程，那一部分属于热更
 3. 跨域的消息传递使用统一的事件系统
+
+#### 为什么在热更中跨域调用主工程时需要注册adaptor
+
+在使用ILR作为热更方案的时候，我们会生成CLR绑定，他是一个反射缓存，可以在主工程调用热更中方法时减少反射调用的次数，但这只是一个缓存问题，在另一方面，有时候还需要解决调用机制问题。因为热更和主工程是两个不同的域。例如下面这种情况：
+```c#
+// 主工程
+public class BaseClass {
+    public virtual void DoSomething() { }
+}
+
+// 热更代码
+public class HotfixClass : BaseClass {
+    public override void DoSomething() { }
+}
+```
+当主工程调用BaseClass 中的虚方法DoSomething时，是发生在CLR域中的，CLR的虚方法表中没有热更中的这个方法，这个时候就需要adaptor将该方法注入到虚方法的调用链当中，当CLR调用该虚方法时，adaptor会接管该方法在热更中的调用
